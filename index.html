@@ -3,45 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロジェクトサイト</title>
+    <title>OSIIKA Project 2026</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header>
-        <h1>OSIIKA　Project　2026</h1>
-        <p>3人で共同運営しているプロジェクトの公式サイト</p>
+    <header class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">OSIIKA Project</p>
+            <h1>2026</h1>
+            <p>3人で共同運営しているプロジェクトの公式サイト</p>
+            <div class="hero-buttons">
+                <a class="button-link" href="#about">紹介を見る</a>
+                <a class="button-link button-secondary" href="#contact">リンクへ</a>
+            </div>
+        </div>
     </header>
-    <nav>
-        <a href="#about">OSIIKA　Projectとは</a>
+
+    <nav class="page-nav">
+        <a href="#about">プロジェクトとは</a>
         <a href="#members">メンバー紹介</a>
         <a href="#contact">各種リンク</a>
     </nav>
-    <section id="about">
-        <h2>OSIIKA　Projectとは</h2>
-        <p>
-            このプロジェクトは、3人のメンバーが協力して運営しています。<br>
-            ーこれ以前のアップデート記録は削除されましたー<br>
-            2024/12/28　AbyssAnatomy追加<br>
-            2025/01/02　夢幻の扉・人狼の塔・AI日記更新<br>
-            2025/01/12　楼羅ロケット追加・夢幻の扉更新<br>
-            2025/01/19　Gitリポジトリ作成、リポジトリ更新<br>
-        </p>
-    </section>
-    <section id="members">
-        <h2>メンバー紹介</h2>
-        <ul>
-            <li>OSIIKA: ScratchやUnityroomを中心に活動、今はアニメ制作を少しずつ進めている</li>
-            <li>ひしがたゲスト: 様々なアプリでAIキャラクターを用いて活動している</li>
-            <li>シガナ: </li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>各種リンク</h2>
-        <p><a class="button-link" href="https://scratch.mit.edu/users/OSIIKA/" target="_blank" rel="noopener noreferrer">Scratch</a></p>
-        <p><a class="button-link" href="https://www.unityroom.com/users/1qnpyg8ecboda50slzih" target="_blank" rel="noopener noreferrer">Unityroom</a></p>
-    </section>
+
+    <main class="container">
+        <section id="about" class="section-card">
+            <h2>OSIIKA Projectとは</h2>
+            <p>
+                このプロジェクトは、3人のメンバーが協力して運営しています。<br>
+                ーこれ以前のアップデート記録は削除されましたー
+            </p>
+            <ul class="update-list">
+                <li>2024/12/28　AbyssAnatomy追加</li>
+                <li>2025/01/02　夢幻の扉・人狼の塔・AI日記更新</li>
+                <li>2025/01/12　楼羅ロケット追加・夢幻の扉更新</li>
+                <li>2025/01/19　Gitリポジトリ作成、リポジトリ更新</li>
+            </ul>
+        </section>
+
+        <section id="members" class="section-card">
+            <h2>メンバー紹介</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>OSIIKA</h3>
+                    <p>ScratchやUnityroomを中心に活動。今はアニメ制作を少しずつ進めています。</p>
+                </article>
+                <article class="card">
+                    <h3>ひしがたゲスト</h3>
+                    <p>様々なアプリでAIキャラクターを用いて活動しています。</p>
+                </article>
+                <article class="card">
+                    <h3>シガナ</h3>
+                    <p>現在の活動内容は準備中です。</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section-card">
+            <h2>各種リンク</h2>
+            <div class="link-grid">
+                <a class="button-link" href="https://scratch.mit.edu/users/OSIIKA/" target="_blank" rel="noopener noreferrer">Scratch</a>
+                <a class="button-link" href="https://www.unityroom.com/users/1qnpyg8ecboda50slzih" target="_blank" rel="noopener noreferrer">Unityroom</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 プロジェクト名. All rights reserved.</p>
+        <p>&copy; 2026 OSIIKA Project</p>
     </footer>
 </body>
 </html>
