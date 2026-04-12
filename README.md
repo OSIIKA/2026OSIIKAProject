@@ -9,3 +9,6 @@ git commit -m "Update index.html"
 git commit -m "Update stylesheet"
 git commit -m "Update README.md"
 git push
+
+
+.\index.html
