@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>OSIIKA　Project</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="logo">
+    <div class="widther">
+      <img src="./img/NewLogo.png">
+    </div>
+    
+  
+    <h1 class="maintitle">OSIIKA　Project</h1>
+  </div>
+  <div class="about">
+    <div class="abouttitle">
+      <p>OSIIKA　Projectについて</p>
+    </div>
+    <div class="abouttext">
+      <p>
+      </p>
+    </div>
+  </div>
+  <div class="mainpng">
+    <div class="each">
+      <img src="PIFPNG.png">
+      <p>不明艦からのメッセージ、転移した惑星、全ての謎の答えはこの宇宙の果てに……</p>
+      <a href="./pif2.html">紫鉄艦隊</a>
+    </div>
+    <div class="each">
+      <img src="MNTPNG.png">
+      <p>いつから始まって何処に向かうのか、繰り返した夢の先にある物とは</p>
+      <a href="./MugenNoTobira.html">夢幻の扉</a>
+    </div>
+    <div class="each">
+      <img src="JNTPNG.png">
+      <p>目が覚めて目に入った塔は、人狼の村だった</p>
+      <a href="./jnt.html">人狼の塔</a>
+    </div>
+  </div>
+  <div class="mainpng">
+    <div class="each">
+      <img src="CSPNG.png">
+      <p></p>
+      <a href="./mirai.html">エラーシステム</a>
+    </div>
+    <div class="each">
+      <img src="AINPNG.png">
+      <p>AIと過ごす日常</p>
+      <a href="./nitijyou.html">AI日記</a>
+    </div>
+    <div class="each">
+      <img src="AbyssAnatomyPNG.png">
+      <p>AbyssAnatomy</p>
+      <a href="./AbyssAnatomy.html">AbyssAnatomy</a>
+    </div>
+  </div>
+  <div class="mainpng">
+    <div class="each">
+      <img src="CSPNG.png">
+      <p></p>
+      <a href="./RouraRocket.html">楼羅ロケット</a>
+    </div>
+    <div class="each">
+      <img src="AINPNG.png">
+      <p></p>
+      <a href="./nitijyou.html">AI日記</a>
+    </div>
+    <div class="each">
+      <img src="AbyssAnatomyPNG.png">
+      <p></p>
+      <a href="./AbyssAnatomy.html">AbyssAnatomy</a>
+    </div>
+  </div>
+  <footer>
+    @OSIIKANOVEL.
+  </footer>
+</body>
+</html>
