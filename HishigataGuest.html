@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ひしがたゲスト | プロフィール</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Yu Gothic UI", "Hiragino Kaku Gothic Pro", sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+        header {
+            background: #111;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        .hero {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr 280px;
+            align-items: start;
+        }
+        .hero img {
+            width: 100%;
+            border-radius: 16px;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            background: #ddd;
+        }
+        section {
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        h1, h2 {
+            margin: 0 0 16px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tag {
+            background: #222;
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+        }
+        .contact a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ひしがたゲスト</h1>
+        <p>個人活動名 / クリエイティブ・プロフィール</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h2>プロフィール</h2>
+                <p>ひしがたゲストは、ビジュアルアート、デザイン、音楽表現を中心に活動する個人クリエイターです。日常の断片から発想を得て、独自の視点で作品を紡ぎ出します。</p>
+                <div class="tags">
+                    <span class="tag">アート</span>
+                    <span class="tag">グラフィック</span>
+                    <span class="tag">音楽</span>
+                    <span class="tag">ウェブ表現</span>
+                    <span class="tag">コラボレーション</span>
+                </div>
+            </div>
+            <img src="https://via.placeholder.com/400x500?text=Profile+Image" alt="ひしがたゲストのイメージ">
+        </section>
+
+        <section>
+            <h2>活動内容</h2>
+            <p>展示・作品制作、オンラインコンテンツの発表、デジタルデザインや映像制作など、幅広い領域で制作を行っています。個展・グループ展への参加や、Web上での発表を通じて、表現の幅を広げています。</p>
+        </section>
+
+        <section>
+            <h2>メッセージ</h2>
+            <p>「ひしがたゲスト」という名義は、訪れる場所や時間をゆるやかに結ぶ存在としての気持ちを込めています。見た人にとって新しい視点や静かな余韻を届けたいと考えています。</p>
+        </section>
+
+        <section class="contact">
+            <h2>お問い合わせ</h2>
+            <p>ご依頼やご相談は、メールにて承ります。</p>
+            <p><a href="mailto:example@example.com">example@example.com</a></p>
+        </section>
+    </main>
+</body>
+</html>
