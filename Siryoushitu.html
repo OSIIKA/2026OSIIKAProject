@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>資料室</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2, h3, h4, p {
+            margin: 0;
+        }
+        .header {
+            margin-bottom: 24px;
+        }
+        .section {
+            margin-bottom: 32px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 16px;
+            width: calc(33.333% - 10.666px);
+            box-sizing: border-box;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .frame {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        .frame img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: 840px) {
+            .card {
+                width: 100%;
+            }
+        }
+        .copy-text {
+            cursor: pointer;
+            color: #065fd4;
+            text-decoration: underline;
+        }
+        .copy-text.copied {
+            color: #0a8a0a;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>文章や絵に関する資料</h1>
+            <p>文章資料、イラスト、テンプレート枠をまとめて表示します。用途に合わせて自由に活用してください。</p>
+        </header>
+
+        <section class="section">
+            <h2>テンプレート枠：説明</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>テキスト資料</h3>
+                    <p>書き出し用テンプレート。説明文や引用、ストーリー案を整理する枠です。</p>
+                </div>
+                <div class="card">
+                    <h3>ビジュアル資料</h3>
+                    <p>イラストや写真を並べるためのギャラリー枠。資料の一覧やサムネイル表示に。</p>
+                </div>
+                <div class="card">
+                    <h3>メモ・備考</h3>
+                    <p>補足情報やコメント、管理用のメタデータを記録するための枠。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>コード資料集</h2>
+            <div class="frame">
+                <h3>Unity操作まとめ</h3>
+                <p>ゲーム開発におけるUnityの操作方法をまとめた資料です。</p>
+                <h4>変数（データの保存）ゲーム内の状態を保持する</h4>
+                <p>変数にはpublicとprivateとSerializeFieldが存在する</p>
+                <p>①publicは他のスクリプトからアクセスできる変数</p>
+                <p>②privateはそのスクリプト内でのみアクセスできる変数</p>
+                <p>③SerializeFieldはprivate変数をインスペクターで編集できるようにするための属性</p>
+                <p>基本的にはpublic変数を減らし、SerializeFieldを使う方が推奨される</p>
+                <h4>変数の型の例</h4>
+                <p>①数値型</p>
+                <p>// 整数</p>
+                <p>public int hp = 100;</p>
+                <p>// 小数</p>
+                <p>public float speed = 5.0f;</p>
+                <p>// 高精度の小数</p>
+                <p>public double precisionValue = 3.141592653589793;</p>
+                <p>// 大きな整数</p>
+                <p>public long largeNumber = 123456789012345L;</p>
+                <p>②真偽値型bool（ブール型）</p>
+                <p>取得可能な値：trueまたはfalseのみ</p>
+                <p>2択の状態を示すために使用する型</p>
+                <p>public状態にしておくことで、Inspector 上にチェックボックスとして表示可能（簡単にテスト可能）</p>
+                <p>// 真偽値</p>
+                <p>public bool isGameOver = false;</p>
+                <p>if (isGameOver)</p>
+                <p>{</p>
+                <p>    // ゲームオーバー時の処理</p>
+                <p>    return;</p>
+                <p>}</p>
+                <p>または、void形式で以下のように記述する事もできる</p>
+                <p>public void GameOver()</p>
+                <p>{</p>
+                <p>    // ゲームオーバー時の処理</p>
+                <p>}</p>
+                <p>③文字・文字列型</p>
+                <p>1文字（値型）</p>
+                <p>public char grade = 'A';</p>
+                <p>// Aキーが押されたかどうか判定する</p>
+                <p>if (key == 'A')</p>
+                <p>{</p>
+                <p>    // Aキーが押された時の処理</p>
+                <p>}</p>
+                <p>文字列（参照型）</p>
+                <p>public string playerName = "Alice";</p>
+                <p>string greeting = "Hello, " + playerName + "!";</p>
+                <p>変換（char → string）</p>
+                <p>char grade = 'A';</p>
+                <p>string gradeString = grade.ToString();</p>
+                <p>変換（string → char（1文字だけ））</p>
+                <p>string name = "Alice";</p>
+                <p>char charValue = name[0];</p>
+                <p>char charValue = name[1];</p>
+                <p>長さを取得する</p>
+                <p>public int nameLength = playerName.Length;</p>
+                <p>④位置・方向</p>
+                <p>位置や方向を表すための型</p>
+                <p>public Vector3 playerPosition = new Vector3(0, 0, 0);</p>
+                <p>Vector3→3つの値（x, y, z）をまとめた型、Unityで位置・方向・速度・力などを表すときの基本型として使用されている</p>
+                <p>playerPosition→プレイヤーが「どこにいるか」「どこへ動かすか」を表す変数名として使用される事が多い</p>
+                <p>new Vector3(0, 0, 0)→x = 0, y = 0, z = 0のベクトルを表現</p>
+                <p>// 位置として使用する場合</p>
+                <p>public Vector3 enemyPosition = new Vector3(5, 0, 0);</p>
+                <p>// 方向として使用する場合</p>
+                <p>public Vector3 enemyDirection = new Vector3(1, 0, 0);</p>
+                <p>⑤回転</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>絵資料テンプレート</h2>
+            <div class="gallery">
+                <div class="frame">
+                    <img src="https://via.placeholder.com/400x240?text=イラストA" alt="イラストA">
+                    <p>イラストAのタイトルや説明。</p>
+                </div>
+                <div class="frame">
+                    <img src="https://via.placeholder.com/400x240?text=イラストB" alt="イラストB">
+                    <p>イラストBのタイトルや説明。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>枠テンプレート一覧</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>標準枠</h3>
+                    <p>ノートや資料のまとめに適したシンプルなボックス。</p>
+                </div>
+                <div class="card">
+                    <h3>ギャラリー枠</h3>
+                    <p>画像を並べやすいグリッド形式のデザイン。</p>
+                </div>
+                <div class="card">
+                    <h3>のびのび枠</h3>
+                    <p>大きめの余白をとったゆったりした表示。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
