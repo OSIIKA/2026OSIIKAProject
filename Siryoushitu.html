@@ -28,6 +28,13 @@
             flex-wrap: wrap;
             gap: 16px;
         }
+        .cards--single {
+            display: block;
+            margin-top: 16px;
+        }
+        .cards--single .card {
+            width: 100%;
+        }
         .card {
             background: #fff;
             border: 1px solid #ddd;
@@ -48,12 +55,38 @@
             border-radius: 10px;
             padding: 16px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            max-height: 400px;
+            overflow-y: auto;
         }
         .frame img {
             width: 100%;
             display: block;
             border-radius: 8px;
             margin-bottom: 12px;
+        }
+        .card img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            border: 2px solid #999;
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.18);
+            margin-top: 12px;
+        }
+        .visual-gallery {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            margin-top: 16px;
+            padding-bottom: 4px;
+        }
+        .visual-gallery .visual-item {
+            flex: 0 0 180px;
+            min-width: 180px;
+        }
+        .visual-gallery .visual-item img {
+            height: auto;
+            max-height: 160px;
+            object-fit: cover;
         }
         @media (max-width: 840px) {
             .card {
@@ -77,7 +110,7 @@
             <h1>文章や絵に関する資料</h1>
             <p>文章資料、イラスト、テンプレート枠をまとめて表示します。用途に合わせて自由に活用してください。</p>
         </header>
-
+        <p><a class="button-link" href="index.html">ホームに戻る</a></p>
         <section class="section">
             <h2>テンプレート枠：説明</h2>
             <div class="cards">
@@ -86,20 +119,56 @@
                     <p>書き出し用テンプレート。説明文や引用、ストーリー案を整理する枠です。</p>
                 </div>
                 <div class="card">
-                    <h3>ビジュアル資料</h3>
-                    <p>イラストや写真を並べるためのギャラリー枠。資料の一覧やサムネイル表示に。</p>
-                </div>
-                <div class="card">
                     <h3>メモ・備考</h3>
                     <p>補足情報やコメント、管理用のメタデータを記録するための枠。</p>
+                </div>
+            </div>
+            <div class="cards cards--single">
+                <div class="card">
+                    <h3>ビジュアル資料</h3>
+                    <p>イラストや写真を並べるためのギャラリー枠。資料の一覧やサムネイル表示に。</p>
+                    <div class="visual-gallery">
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-1-1--紫シルエット.png" alt="紫鉄艦隊のシルエット画像">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-1-2--白シルエット.png" alt="イラストA">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-1-3--黒シルエット.png" alt="イラストB">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-1-4--建造完了Lv.1戦艦.png" alt="イラストC">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-1-5--ゲームサムネ.png" alt="イラストD">
+                        </div>
+                    </div>
+                    <div class="visual-gallery">
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-2-1--ドット絵に挑戦1.gif" alt="イラストA">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-2-2--ドット絵に挑戦2.png" alt="イラストB">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-2-3--正面モニター.png" alt="イラストC">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-2-4--地図モニター.png" alt="イラストD">
+                        </div>
+                        <div class="visual-item">
+                            <img src="ImagesSiryoushitu/紫鉄-2-5--編成画面.png" alt="イラストE">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="section">
             <h2>コード資料集</h2>
+            <h3>Unity操作まとめ</h3>
             <div class="frame">
-                <h3>Unity操作まとめ</h3>
                 <p>ゲーム開発におけるUnityの操作方法をまとめた資料です。</p>
                 <h4>変数（データの保存）ゲーム内の状態を保持する</h4>
                 <p>変数にはpublicとprivateとSerializeFieldが存在する</p>
@@ -164,6 +233,97 @@
                 <p>// 方向として使用する場合</p>
                 <p>public Vector3 enemyDirection = new Vector3(1, 0, 0);</p>
                 <p>⑤回転</p>
+            </div>
+            <h3>Blender操作まとめ</h3>
+            <div class="frame">
+                <p></p>
+                <h4></h4>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <h4></h4>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
         </section>
 
